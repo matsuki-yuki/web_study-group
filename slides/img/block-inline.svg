@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif">
+  <!-- ブロック -->
+  <text x="180" y="34" font-size="18" text-anchor="middle" fill="#2c3542" font-weight="bold">ブロックボックス</text>
+  <text x="180" y="56" font-size="13" text-anchor="middle" fill="#888">縦に積まれる・横幅いっぱい</text>
+  <rect x="40" y="70" width="280" height="44" rx="5" fill="#e2eef9" stroke="#2f6db5" stroke-width="2"/>
+  <text x="180" y="98" font-size="15" text-anchor="middle" fill="#2f6db5">&lt;h1&gt; 見出し</text>
+  <rect x="40" y="124" width="280" height="44" rx="5" fill="#e2eef9" stroke="#2f6db5" stroke-width="2"/>
+  <text x="180" y="152" font-size="15" text-anchor="middle" fill="#2f6db5">&lt;p&gt; 段落</text>
+  <rect x="40" y="178" width="280" height="44" rx="5" fill="#e2eef9" stroke="#2f6db5" stroke-width="2"/>
+  <text x="180" y="206" font-size="15" text-anchor="middle" fill="#2f6db5">&lt;div&gt; まとまり</text>
+
+  <!-- 区切り線 -->
+  <line x1="360" y1="60" x2="360" y2="240" stroke="#e0dacd" stroke-width="2"/>
+
+  <!-- インライン -->
+  <text x="540" y="34" font-size="18" text-anchor="middle" fill="#2c3542" font-weight="bold">インラインボックス</text>
+  <text x="540" y="56" font-size="13" text-anchor="middle" fill="#888">横に並ぶ・中身のぶんだけ</text>
+  <rect x="400" y="80" width="280" height="130" rx="5" fill="#fafafa" stroke="#ccc" stroke-width="1.5"/>
+  <text x="420" y="120" font-size="15" fill="#333">これは
+    <tspan fill="#e8622c" font-weight="bold">&lt;a&gt;リンク&lt;/a&gt;</tspan>や
+  </text>
+  <text x="420" y="150" font-size="15" fill="#333">
+    <tspan fill="#e8622c" font-weight="bold">&lt;span&gt;強調&lt;/span&gt;</tspan>が
+  </text>
+  <text x="420" y="180" font-size="15" fill="#333">文章の流れの中に並ぶ</text>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "name": "web-study-html-css-slides",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "marp -w -s .",
+    "build": "marp slides.md -o dist/slides.html",
+    "pdf": "marp slides.md -o dist/slides.pdf --allow-local-files"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.5.0"
+  }
+}

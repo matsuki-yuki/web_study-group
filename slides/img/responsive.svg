@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif">
+  <!-- PC -->
+  <text x="180" y="28" font-size="16" text-anchor="middle" fill="#2c3542" font-weight="bold">PC（広い画面）</text>
+  <rect x="40" y="42" width="280" height="190" rx="8" fill="#ffffff" stroke="#2c3542" stroke-width="2"/>
+  <rect x="40" y="42" width="280" height="30" rx="8" fill="#2c3542"/>
+  <text x="180" y="63" font-size="13" text-anchor="middle" fill="#fff">ヘッダー</text>
+  <rect x="55" y="85" width="160" height="130" rx="5" fill="#e2eef9" stroke="#2f6db5" stroke-width="1.5"/>
+  <text x="135" y="155" font-size="14" text-anchor="middle" fill="#2f6db5">メイン</text>
+  <rect x="225" y="85" width="80" height="130" rx="5" fill="#fdf1e9" stroke="#e8622c" stroke-width="1.5"/>
+  <text x="265" y="150" font-size="12" text-anchor="middle" fill="#e8622c">サイド</text>
+
+  <!-- 矢印 -->
+  <line x1="345" y1="140" x2="405" y2="140" stroke="#888" stroke-width="3"/>
+  <polygon points="405,133 421,140 405,147" fill="#888"/>
+  <text x="383" y="126" font-size="13" text-anchor="middle" fill="#888">狭くなると</text>
+
+  <!-- スマホ -->
+  <text x="565" y="28" font-size="16" text-anchor="middle" fill="#2c3542" font-weight="bold">スマホ（狭い画面）</text>
+  <rect x="500" y="42" width="130" height="220" rx="12" fill="#ffffff" stroke="#2c3542" stroke-width="2"/>
+  <rect x="500" y="42" width="130" height="26" rx="12" fill="#2c3542"/>
+  <text x="565" y="60" font-size="12" text-anchor="middle" fill="#fff">ヘッダー</text>
+  <rect x="514" y="80" width="102" height="90" rx="5" fill="#e2eef9" stroke="#2f6db5" stroke-width="1.5"/>
+  <text x="565" y="130" font-size="13" text-anchor="middle" fill="#2f6db5">メイン</text>
+  <rect x="514" y="180" width="102" height="70" rx="5" fill="#fdf1e9" stroke="#e8622c" stroke-width="1.5"/>
+  <text x="565" y="220" font-size="12" text-anchor="middle" fill="#e8622c">サイド</text>
+  <text x="565" y="275" font-size="12" text-anchor="middle" fill="#888">→ 縦積みに</text>
+</svg>
