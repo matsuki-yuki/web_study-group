@@ -1,5 +1,6 @@
 name: Deploy slides to GitHub Pages
 
+# Pages配信を GitHub Actions ソースに切り替えたため、再デプロイ用に更新
 on:
   push:
     branches: [main]
