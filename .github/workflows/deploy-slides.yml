@@ -1,0 +1,77 @@
+name: Deploy slides to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "slides/**"
+      - ".github/workflows/deploy-slides.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: slides/package-lock.json
+
+      - name: Install dependencies
+        working-directory: slides
+        run: npm ci
+
+      - name: Build slides
+        working-directory: slides
+        run: npx marp -I . -o ../public --html
+
+      - name: Build index page
+        run: |
+          cat > public/index.html <<'EOF'
+          <!doctype html>
+          <html lang="ja">
+          <head>
+            <meta charset="utf-8" />
+            <title>Web勉強会 スライド</title>
+            <style>
+              body { font-family: -apple-system, "Hiragino Kaku Gothic ProN", sans-serif; max-width: 640px; margin: 60px auto; padding: 0 20px; }
+              h1 { font-size: 1.4rem; }
+              ul { line-height: 2; }
+              a { color: #1c1c1e; }
+            </style>
+          </head>
+          <body>
+            <h1>Web勉強会 スライド</h1>
+            <ul>
+              <li><a href="slides.html">HTML/CSS勉強会</a></li>
+              <li><a href="1day.html">Web勉強会の流れ（1日目）</a></li>
+            </ul>
+          </body>
+          </html>
+          EOF
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
