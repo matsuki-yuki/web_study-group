@@ -38,6 +38,9 @@ jobs:
         working-directory: slides
         run: npx marp -I . -o ../public --html
 
+      - name: Copy slide assets
+        run: cp -r slides/img public/img
+
       - name: Build index page
         run: |
           cat > public/index.html <<'EOF'
